@@ -41,6 +41,7 @@ for k = 1:K
     Qnew_index = size(RRTTree,2)+1;
     RRTTree(Qnew_index).point = Qnew;
     RRTTree(Qnew_index).distance = min_dist;
+    RRTTree(Qnew_index).cost = min_dist + RRTTree(Qnear_index).cost;
     RRTTree(Qnew_index).link = Qnear_index;
 
     %% Plot Lines
